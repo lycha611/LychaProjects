@@ -1,0 +1,25 @@
+Bibliotek, do wykorzystania w projekcie:
+
+http://android-arsenal.com/details/1/2126
+http://android-arsenal.com/details/1/2120
+http://android-arsenal.com/details/1/2119
+http://android-arsenal.com/details/1/2113
+http://android-arsenal.com/details/1/1040
+http://android-arsenal.com/details/1/149
+http://android-arsenal.com/details/1/401
+http://android-arsenal.com/details/3/1091
+http://android-arsenal.com/details/1/131
+http://android-arsenal.com/details/1/855
+http://android-arsenal.com/details/1/424
+http://android-arsenal.com/details/1/1136
+http://android-arsenal.com/details/1/32
+http://android-arsenal.com/details/1/266
+http://android-arsenal.com/details/1/824
+http://android-arsenal.com/details/1/67
+http://android-arsenal.com/details/1/1939
+http://android-arsenal.com/details/1/1526
+http://android-arsenal.com/details/1/1388
+http://android-arsenal.com/details/1/791
+http://android-arsenal.com/details/1/1085
+http://android-arsenal.com/details/1/1564
+http://android-arsenal.com/details/1/2131

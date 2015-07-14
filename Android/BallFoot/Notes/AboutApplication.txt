@@ -65,4 +65,3 @@ Ekrany:
 	3) ekran do rejestracji
 	4) 
 
-Bibliotek, do wykorzystania w projfghjekcie:
