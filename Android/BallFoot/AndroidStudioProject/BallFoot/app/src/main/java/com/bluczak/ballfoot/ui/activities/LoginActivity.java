@@ -1,5 +1,6 @@
 package com.bluczak.ballfoot.ui.activities;
 
+import com.bluczak.ballfoot.R;
 import com.bluczak.corelib.backend.annotations.ContentView;
 import com.bluczak.corelib.ui.activities.BaseActivity;
 
