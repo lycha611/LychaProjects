@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BallFoot</string>
+
+    <string name="ht_email">Email</string>
+    <string name="ht_password">Hasło</string>
+    <string name="ht_re_enter_password">Powtórz hasło</string>
+    <string name="ht_name">Nazwa</string>
+
+    <string name="btn_log_in">Zaloguj</string>
+    <string name="btn_sign_up">Zarejestruj</string>
+    <string name="btn_forgot_password">Zapomniane hasło</string>
+    <string name="btn_create_account">Utwórz konto</string>
+    <string name="btn_submit">Zatwierdź</string>
+
+    <string name="lbl_enter_email_to_recover_password">Wprowadz swój email do odzyskania twojego hasła</string>
+
+</resources>

@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">BallFoot</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="ht_email">Email</string>
+    <string name="ht_password">Password</string>
+    <string name="ht_re_enter_password">Re-enter Password</string>
+    <string name="ht_name">Name</string>
+
+    <string name="btn_log_in">Log in</string>
+    <string name="btn_sign_up">Sign up</string>
+    <string name="btn_forgot_password">Forgot password</string>
+    <string name="btn_create_account">Create account</string>
+    <string name="btn_submit">Submit</string>
+
+    <string name="lbl_enter_email_to_recover_password">Enter your email to recover your password</string>
+
 </resources>

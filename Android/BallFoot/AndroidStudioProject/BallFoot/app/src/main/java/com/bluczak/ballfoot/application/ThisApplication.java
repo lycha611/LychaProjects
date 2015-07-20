@@ -1,10 +1,11 @@
 package com.bluczak.ballfoot.application;
 
 import com.bluczak.ballfoot.backend.configuration.Configuration;
+import com.bluczak.ballfoot.backend.events.EventBuses;
 import com.bluczak.corelib.CoreLib;
 import com.bluczak.corelib.application.BaseApplication;
+import com.bluczak.corelib.backend.services.BackgroundWorkerService;
 import com.parse.Parse;
-import com.parse.ParseAnalytics;
 import com.parse.ParseInstallation;
 
 import net.danlew.android.joda.JodaTimeAndroid;
@@ -13,6 +14,9 @@ import net.danlew.android.joda.JodaTimeAndroid;
  * Created by BLuczak on 2015-07-14.
  */
 public class ThisApplication extends BaseApplication {
+
+    public static final String APPLICATION_ID = "4w7B07hbHeegyBd26vpGs6VfFsMZJMtVM2g20Ik1";
+    public static final String CLIENT_KEY = "zr12UaoIqOPQKHRFiYJof2jXXYqwyhXdE4fsbmuA";
 
     @Override
     public void onCreate() {
@@ -28,16 +32,16 @@ public class ThisApplication extends BaseApplication {
 
         EventBuses.init();
         Settings.init(this);
-        NetworkStateMonitor.init(this);
+//        NetworkStateMonitor.init(this);
         JodaTimeAndroid.init(this);
         BackgroundWorkerService.initialize(this, EventBuses.BackgroundWorker);
-        UpdaterService.initialize(this, EventBuses.VersionsAndUpdates);
-        Authentication.initialize(this);
+//        UpdaterService.initialize(this, EventBuses.VersionsAndUpdates);
+//        Authentication.initialize(this);
 
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this, "4w7B07hbHeegyBd26vpGs6VfFsMZJMtVM2g20Ik1", "zr12UaoIqOPQKHRFiYJof2jXXYqwyhXdE4fsbmuA");
+        Parse.initialize(this, APPLICATION_ID, CLIENT_KEY);
         ParseInstallation.getCurrentInstallation().saveInBackground();
 
     }

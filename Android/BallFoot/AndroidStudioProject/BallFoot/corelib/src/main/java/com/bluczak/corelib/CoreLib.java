@@ -1,6 +1,8 @@
 package com.bluczak.corelib;
 
 import com.bluczak.corelib.backend.utils.Logger;
+import com.bluczak.corelib.ui.activities.LoggerActivity;
+import com.bluczak.corelib.ui.fragments.LoggerFragment;
 
 /**
  * Created by BLuczak on 2015-07-19.
