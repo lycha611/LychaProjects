@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <ListView
+        android:id="@+id/lvMessages"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/answerbar"
+        android:choiceMode="singleChoice"
+        android:drawSelectorOnTop="false"
+        android:fastScrollEnabled="true"
+        android:scrollingCache="true"/>
+
+    <LinearLayout
+        android:id="@+id/answerbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/text_layout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:addStatesFromChildren="true">
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoText="true"
+                android:gravity="top"
+                android:hint="@string/tv_hint"
+                android:imeOptions="actionDone|flagNoEnterAction"
+                android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                android:maxLines="4"
+                android:nextFocusRight="@+id/send_"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSend"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/btn_send"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AlbumOfBeers</string>
+
+    <string name="title_add_beer">Add beer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_add_beer">Add beer</string>
+    <string name="action_add_image">Add image</string>
+    <string name="action_save_beer">Save beer</string>
+
+    <string name="info_beer_has_been_added">Beer has been added</string>
+    <string name="info_you_must_enter_name_for_beer">You must enter a name for beer</string>
+
+    <string name="lbl_beer_name">Beer name:</string>
+    <string name="lbl_kind_of_beer">Kind of beer:</string>
+    <string name="lbl_description">Description:</string>
+
+</resources>

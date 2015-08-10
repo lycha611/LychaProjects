@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.bluczak.albumofbeers"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".application.ThisApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- Configuration for Database - Active Android -->
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="albumOfBeers.db"/>
+
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1"/>
+
+        <!-- TODO: remember to put here all models we will be using in the application -->
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.bluczak.albumofbeers.backend.models.BeerModel, com.bluczak.albumofbeers.backend.models.ImageModel"/>
+
+        <activity
+            android:name="com.bluczak.albumofbeers.ui.activities.HomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.bluczak.albumofbeers.ui.activities.BeerActivity"
+            android:label="@string/app_name"
+            >
+        </activity>
+
+        <activity
+            android:name="com.bluczak.albumofbeers.ui.activities.NewBeerActivity"
+            android:label="@string/title_add_beer"
+            >
+        </activity>
+
+    </application>
+
+</manifest>
