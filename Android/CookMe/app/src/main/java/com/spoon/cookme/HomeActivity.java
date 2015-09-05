@@ -34,9 +34,12 @@ public class HomeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+<<<<<<< HEAD
 
     public void newMethod(){
 
     }
 
+=======
+>>>>>>> origin/develop
 }
