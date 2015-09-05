@@ -1,17 +1,18 @@
-package com.spoon.cookme;
+package com.spoon.cookme.ui.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.spoon.cookme.R;
+
 public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-    }
+        setContentView(R.layout.activity_home);    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -33,5 +34,13 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void newMethod(){
+
+    }
+
+    public void newMethodd(){
+
     }
 }
