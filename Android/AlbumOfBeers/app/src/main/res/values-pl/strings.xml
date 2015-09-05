@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Album piwny</string>
+
+    <string name="title_add_beer">Dodaj piwo</string>
+
+    <string name="action_settings">Ustawienia</string>
+    <string name="action_add_beer">Dodaj piwo</string>
+    <string name="action_add_image">Dodaj obraz</string>
+    <string name="action_save_beer">Zapisz piwo</string>
+
+    <string name="info_beer_has_been_added">Piwo zostało dodane</string>
+    <string name="info_you_must_enter_name_for_beer">Musisz wprowadzić nazwę dla piwa</string>
+
+    <string name="lbl_beer_name">Nazwa piwa:</string>
+    <string name="lbl_kind_of_beer">Gatunek:</string>
+    <string name="lbl_description">Opis:</string>
+
+</resources>

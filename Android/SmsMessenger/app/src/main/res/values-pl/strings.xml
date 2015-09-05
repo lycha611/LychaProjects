@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="btn_send">Wyślij</string>
+    <string name="lbl_me">Ja</string>
+    <string name="tv_hint">Tekst</string>
+
+    <string name="error_conv_null">Błąd pobierania konwersacji z bazy!</string>
+    <string name="error_sending_failed">Wysyłanie nieudane</string>
+
+</resources>
