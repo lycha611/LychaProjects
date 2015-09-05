@@ -3,6 +3,7 @@ package com.spoon.cookme.application;
 import com.spoon.cookme.backend.configuration.Configuration;
 import com.spoon.corelib.CoreLib;
 import com.spoon.corelib.application.BaseApplication;
+import com.spoon.corelib.backend.services.BackgroundWorkerService;
 
 import net.danlew.android.joda.JodaTimeAndroid;
 
@@ -12,6 +13,7 @@ import net.danlew.android.joda.JodaTimeAndroid;
 public class ThisApplication extends BaseApplication {
 
 
+    // Simple comment
     public static final String APPLICATION_ID = "4w7B07hbHeegyBd26vpGs6VfFsMZJMtVM2g20Ik1";
     public static final String CLIENT_KEY = "zr12UaoIqOPQKHRFiYJof2jXXYqwyhXdE4fsbmuA";
 
