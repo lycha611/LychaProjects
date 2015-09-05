@@ -17,7 +17,7 @@ public class InjectionActivity extends LoggerActivity {
         super.onCreate(savedInstanceState);
 
         setProperContentView();
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     // override this method if needed

@@ -9,7 +9,7 @@ import com.spoon.corelib.backend.utils.Logger;
 /**
  * Created by Lycha on 9/5/2015.
  */
-public class BaseService extends Service {
+public abstract class BaseService extends Service {
 
     //region UI Thread Handler
     protected final Handler UiHandler = new Handler();

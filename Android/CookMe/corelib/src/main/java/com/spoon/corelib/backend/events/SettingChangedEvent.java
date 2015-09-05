@@ -1,5 +1,7 @@
 package com.spoon.corelib.backend.events;
 
+import com.spoon.corelib.backend.settings.SettingValue;
+
 /**
  * Created by Lycha on 9/5/2015.
  */

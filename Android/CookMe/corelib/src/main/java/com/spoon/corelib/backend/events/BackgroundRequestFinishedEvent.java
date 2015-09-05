@@ -1,5 +1,7 @@
 package com.spoon.corelib.backend.events;
 
+import com.spoon.corelib.backend.services.BackgroundWorkerService;
+
 /**
  * Created by Lycha on 9/5/2015.
  */

@@ -1,6 +1,8 @@
 package com.spoon.corelib;
 
 import com.spoon.corelib.backend.utils.Logger;
+import com.spoon.corelib.ui.activities.LoggerActivity;
+import com.spoon.corelib.ui.fragments.LoggerFragment;
 
 /**
  * Created by Lycha on 9/5/2015.

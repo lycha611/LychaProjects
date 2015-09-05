@@ -1,6 +1,7 @@
 package com.spoon.cookme.application;
 
 import com.spoon.cookme.backend.configuration.Configuration;
+import com.spoon.cookme.backend.events.EventBuses;
 import com.spoon.corelib.CoreLib;
 import com.spoon.corelib.application.BaseApplication;
 import com.spoon.corelib.backend.services.BackgroundWorkerService;
@@ -11,11 +12,6 @@ import net.danlew.android.joda.JodaTimeAndroid;
  * Created by Lycha on 9/5/2015.
  */
 public class ThisApplication extends BaseApplication {
-
-
-    // Simple comment
-    public static final String APPLICATION_ID = "4w7B07hbHeegyBd26vpGs6VfFsMZJMtVM2g20Ik1";
-    public static final String CLIENT_KEY = "zr12UaoIqOPQKHRFiYJof2jXXYqwyhXdE4fsbmuA";
 
     @Override
     public void onCreate() {
@@ -36,12 +32,6 @@ public class ThisApplication extends BaseApplication {
         BackgroundWorkerService.initialize(this, EventBuses.BackgroundWorker);
 //        UpdaterService.initialize(this, EventBuses.VersionsAndUpdates);
 //        Authentication.initialize(this);
-
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-
-        Parse.initialize(this, APPLICATION_ID, CLIENT_KEY);
-        ParseInstallation.getCurrentInstallation().saveInBackground();
 
     }
 
