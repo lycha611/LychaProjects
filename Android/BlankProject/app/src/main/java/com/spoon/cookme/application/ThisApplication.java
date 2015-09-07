@@ -1,7 +1,9 @@
 package com.spoon.cookme.application;
 
+import com.activeandroid.ActiveAndroid;
 import com.spoon.cookme.backend.configuration.Configuration;
 import com.spoon.cookme.backend.events.EventBuses;
+import com.spoon.cookme.backend.networking.state.NetworkStateMonitor;
 import com.spoon.corelib.CoreLib;
 import com.spoon.corelib.application.BaseApplication;
 import com.spoon.corelib.backend.services.BackgroundWorkerService;
@@ -25,15 +27,26 @@ public class ThisApplication extends BaseApplication {
                 .setFragmentLoggerEnabled(Configuration.shouldLogFragmentLifecycle())
                 .init();
 
-        EventBuses.init();
-        Settings.init(this);
-//        NetworkStateMonitor.init(this);
         JodaTimeAndroid.init(this);
+        EventBuses.init();
+        NetworkStateMonitor.init(this);
+        ActiveAndroid.initialize(this);
+
         BackgroundWorkerService.initialize(this, EventBuses.BackgroundWorker);
 //        UpdaterService.initialize(this, EventBuses.VersionsAndUpdates);
-//        Authentication.initialize(this);
 
     }
+
+    //    private void initRestClient() {
+//        mRestClient = new RestClient();//    }
+//
+//    public static RestClient getmRestClient() {
+//        return mRestClient;
+//    }
+//
+//    public static void setmRestClient(RestClient mRestClient) {
+//        ThisApplication.mRestClient = mRestClient;
+//    }
 
     public static ThisApplication get() {
         return (ThisApplication) BaseApplication.get();
