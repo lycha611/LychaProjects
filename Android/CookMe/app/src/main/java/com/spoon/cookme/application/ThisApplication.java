@@ -26,7 +26,6 @@ public class ThisApplication extends BaseApplication {
                 .init();
 
         EventBuses.init();
-        Settings.init(this);
 //        NetworkStateMonitor.init(this);
         JodaTimeAndroid.init(this);
         BackgroundWorkerService.initialize(this, EventBuses.BackgroundWorker);
