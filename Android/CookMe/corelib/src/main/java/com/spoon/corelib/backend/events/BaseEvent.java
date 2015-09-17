@@ -39,7 +39,7 @@ public class BaseEvent<T> {
     }
 
     public String getEventLogString() {
-        return String.format("** EVENT(%s.%d)", getEventClassName(), getEventId());
+        return String.format("*** EVENT(%s.%d)", getEventClassName(), getEventId());
     }
 
     public boolean wasConsumed() {

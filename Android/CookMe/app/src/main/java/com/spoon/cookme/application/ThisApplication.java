@@ -1,11 +1,17 @@
 package com.spoon.cookme.application;
 
-import com.activeandroid.ActiveAndroid;
+import com.parse.Parse;
+import com.parse.ParseACL;
+import com.parse.ParseInstallation;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
 import com.spoon.cookme.backend.configuration.Configuration;
 import com.spoon.cookme.backend.events.EventBuses;
+import com.spoon.cookme.backend.models.DemoModel;
 import com.spoon.cookme.backend.networking.state.NetworkStateMonitor;
 import com.spoon.corelib.CoreLib;
 import com.spoon.corelib.application.BaseApplication;
+import com.spoon.corelib.backend.developer.StethoIntegration;
 import com.spoon.corelib.backend.services.BackgroundWorkerService;
 
 import net.danlew.android.joda.JodaTimeAndroid;
@@ -27,26 +33,31 @@ public class ThisApplication extends BaseApplication {
                 .setFragmentLoggerEnabled(Configuration.shouldLogFragmentLifecycle())
                 .init();
 
+        if (Configuration.shouldUseStetho()) {
+            StethoIntegration.init(this);
+        }
+
         JodaTimeAndroid.init(this);
         EventBuses.init();
         NetworkStateMonitor.init(this);
-        ActiveAndroid.initialize(this);
 
         BackgroundWorkerService.initialize(this, EventBuses.BackgroundWorker);
 //        UpdaterService.initialize(this, EventBuses.VersionsAndUpdates);
 
-    }
 
-    //    private void initRestClient() {
-//        mRestClient = new RestClient();//    }
-//
-//    public static RestClient getmRestClient() {
-//        return mRestClient;
-//    }
-//
-//    public static void setmRestClient(RestClient mRestClient) {
-//        ThisApplication.mRestClient = mRestClient;
-//    }
+        //region parse subclasses register
+        ParseObject.registerSubclass(DemoModel.class);
+        //endregion
+
+        Parse.enableLocalDatastore(getApplicationContext());
+        Parse.initialize(this, Configuration.PARSE_APPLICATION_ID, Configuration.PARSE_CLIENT_KEY);
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
+        ParseUser.enableAutomaticUser();
+        ParseACL defaultACL = new ParseACL();
+        ParseACL.setDefaultACL(defaultACL, true);
+
+    }
 
     public static ThisApplication get() {
         return (ThisApplication) BaseApplication.get();

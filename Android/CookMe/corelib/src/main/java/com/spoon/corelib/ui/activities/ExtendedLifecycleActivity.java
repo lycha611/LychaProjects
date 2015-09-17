@@ -15,8 +15,8 @@ public class ExtendedLifecycleActivity extends Activity {
         setupActivityBeforeCreation();
         onCreateBefore(savedInstanceState);
         super.onCreate(savedInstanceState);
-    }
 
+    }
     protected void onCreateBefore(Bundle savedInstanceState) {
     }
 

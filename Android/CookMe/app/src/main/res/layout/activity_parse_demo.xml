@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:text="Save operations"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_save_item_in_backgrond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SaveItemInBackground" />
+
+            <Button
+                android:id="@+id/btn_save_item_in_backgrond_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SaveItemInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_save_all_items_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SaveAllItemsInBackground" />
+
+            <Button
+                android:id="@+id/btn_save_all_items_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SaveAllItemsInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_save_item_eventually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SaveItemEventually" />
+
+            <Button
+                android:id="@+id/btn_save_item_eventually_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SaveItemEventually Callback" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/holo_green_dark"
+                android:gravity="center"
+                android:text="Fetch operation"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_fetch_item_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchItemInBackground" />
+
+            <Button
+                android:id="@+id/btn_fetch_item_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchItemInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_fetch_all_items_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchAllItemsInBackground" />
+
+            <Button
+                android:id="@+id/btn_fetch_all_items_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchAllItemsInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_fetch_item_from_local_datastore_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchItemFromLocalDatastoreInBackground" />
+
+            <Button
+                android:id="@+id/btn_fetch_item_from_local_datastore_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchItemFromLocalDatastoreInBackground Callback" />
+
+
+            <Button
+                android:id="@+id/btn_fetch_item_if_need_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchItemIfNeedInBackground" />
+
+            <Button
+                android:id="@+id/btn_fetch_item_if_need_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchItemIfNeedInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_fetch_all_items_if_need_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchAllItemsIfNeedInBackground" />
+
+            <Button
+                android:id="@+id/btn_fetch_all_items_if_need_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FetchAllItemsIfNeedInBackground Callback" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:text="Pin operations"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_pin_item_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PinItemInBackground" />
+
+            <Button
+                android:id="@+id/btn_pin_item_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PinItemInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_pin_all_items_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PinAllItemsInBackground" />
+
+            <Button
+                android:id="@+id/btn_pin_all_items_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PinAllItemsInBackground Callback" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/holo_purple"
+                android:gravity="center"
+                android:text="Unpin operations"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_unpin_item_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinItemInBackground" />
+
+            <Button
+                android:id="@+id/btn_unpin_item_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinItemInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_unpin_item_in_background_g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinItemInBackground GroupName" />
+
+            <Button
+                android:id="@+id/btn_unpin_item_in_background_g_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinItemInBackground GroupName Callback" />
+
+            <Button
+                android:id="@+id/btn_unpin_all_items_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinAllItemsInBackground" />
+
+            <Button
+                android:id="@+id/btn_unpin_all_items_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinAllItemsInBackground Callback" />
+
+            <Button
+                android:id="@+id/btn_unpin_all_items_in_background_g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinAllItemsInBackground GroupName" />
+
+            <Button
+                android:id="@+id/btn_unpin_all_items_in_background_g_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UnpinAllItemsInBackground GroupName Callback" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/holo_red_dark"
+                android:gravity="center"
+                android:text="Delete operations"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_delete_item_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DeleteItemInBackgground" />
+
+            <Button
+                android:id="@+id/btn_delete_item_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DeleteItemInBackgground Callback" />
+
+            <Button
+                android:id="@+id/btn_delete_all_items_in_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DeleteAllItemsInBackgground" />
+
+            <Button
+                android:id="@+id/btn_delete_all_items_in_background_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DeleteAllItemsInBackgground Callback" />
+
+            <Button
+                android:id="@+id/btn_delete_item_eventually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DeleteItemEventually" />
+
+            <Button
+                android:id="@+id/btn_delete_item_eventually_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DeleteItemEventually Callback" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
