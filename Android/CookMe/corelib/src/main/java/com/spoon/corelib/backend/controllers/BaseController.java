@@ -166,7 +166,6 @@ public class BaseController<L extends BaseModel> {
         object.unpinInBackground(pinGroupName);
     }
 
-
     public void unpinItemInBackground(L object, String pinGroupName, DeleteCallback deleteCallback) {
         object.unpinInBackground(pinGroupName, deleteCallback);
     }

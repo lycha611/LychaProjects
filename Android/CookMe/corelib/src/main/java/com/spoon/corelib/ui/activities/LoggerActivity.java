@@ -69,139 +69,144 @@ public class LoggerActivity extends ExtendedLifecycleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        lifecycle("onCreate(Bundle)");
-        super.onCreate(savedInstanceState);
         log.resetIndentations();
+        lifecycle("onCreate(Bundle)").indent();
+        super.onCreate(savedInstanceState);
+
     }
 
     @Override
     protected void onCreateBefore(Bundle savedInstanceState) {
-        lifecycle("onCreateBefore(Bundle)").indent();
+        lifecycle("onCreateBefore(Bundle)");
         super.onCreateBefore(savedInstanceState);
     }
 
     @Override
     protected void onStart() {
-        lifecycle("onStart()");
-        super.onStart();
         log.resetIndentations();
+        lifecycle("onStart()").indent();
+        super.onStart();
+
+
     }
 
     @Override
     protected void onStartBefore() {
-        lifecycle("onStartBefore()").indent();
+        lifecycle("onStartBefore()");
         super.onStartBefore();
     }
 
     @Override
     protected void onResume() {
-        lifecycle("onResume()");
-        super.onResume();
         log.resetIndentations();
+        lifecycle("onResume()").indent();
+        super.onResume();
     }
 
     @Override
     protected void onResumeBefore() {
-        lifecycle("onResumeBefore()").indent();
+        lifecycle("onResumeBefore()");
         super.onResumeBefore();
     }
 
     @Override
     protected void onPause() {
-        lifecycle("onPause()");
-        super.onPause();
         log.resetIndentations();
+        lifecycle("onPause()").indent();
+        super.onPause();
     }
 
     @Override
     protected void onPauseBefore() {
-        lifecycle("onPauseBefore()").indent();
+        lifecycle("onPauseBefore()");
         super.onPauseBefore();
     }
 
     @Override
     protected void onStop() {
-        lifecycle("onStop()");
-        super.onStop();
         log.resetIndentations();
+        lifecycle("onStop()").indent();
+        super.onStop();
     }
 
     @Override
     protected void onStopBefore() {
-        lifecycle("onStopBefore()").indent();
+        lifecycle("onStopBefore()");
         super.onStopBefore();
     }
 
     @Override
     protected void onRestart() {
-        lifecycle("onRestart()");
-        super.onRestart();
         log.resetIndentations();
+        lifecycle("onRestart()").indent();
+        super.onRestart();
     }
 
     @Override
     protected void onRestartBefore() {
-        lifecycle("onRestartBefore()").indent();
+        lifecycle("onRestartBefore()");
         super.onRestartBefore();
     }
 
     @Override
     protected void onDestroy() {
-        lifecycle("onDestroy()");
-        super.onDestroy();
         log.resetIndentations();
+        lifecycle("onDestroy()").indent();
+        super.onDestroy();
     }
 
     @Override
     protected void onDestroyBefore() {
-        lifecycle("onDestroyBefore()").indent();
+        lifecycle("onDestroyBefore()");
         super.onDestroyBefore();
     }
 
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        lifecycle("onSaveInstanceState(Bundle)");
-        super.onSaveInstanceState(outState);
         log.resetIndentations();
+        lifecycle("onSaveInstanceState(Bundle)").indent();
+        super.onSaveInstanceState(outState);
+
     }
 
     @Override
     protected void onSaveInstanceStateBefore(Bundle outState) {
-        lifecycle("onSaveInstanceStateBefore(Bundle)").indent();
+        lifecycle("onSaveInstanceStateBefore(Bundle)");
         super.onSaveInstanceStateBefore(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        lifecycle("onRestoreInstanceState(Bundle)");
-        super.onRestoreInstanceState(savedInstanceState);
         log.resetIndentations();
+        lifecycle("onRestoreInstanceState(Bundle)").indent();
+        super.onRestoreInstanceState(savedInstanceState);
+
     }
 
     @Override
     protected void onRestoreInstanceStateBefore(Bundle savedInstanceState) {
-        lifecycle("onRestoreInstanceStateBefore(Bundle)").indent();
+        lifecycle("onRestoreInstanceStateBefore(Bundle)");
         super.onRestoreInstanceStateBefore(savedInstanceState);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        lifecycle("onActivityResult(" + requestCode + ", s" + resultCode + ", Intent)");
-        super.onActivityResult(requestCode, resultCode, data);
         log.resetIndentations();
+        lifecycle("onActivityResult(" + requestCode + ", s" + resultCode + ", Intent)").indent();
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     protected void onActivityResultBefore(int requestCode, int resultCode, Intent data) {
-        lifecycle("onActivityResultBefore(" + requestCode + ", s" + resultCode + ", Intent)").indent();
+        lifecycle("onActivityResultBefore(" + requestCode + ", s" + resultCode + ", Intent)");
         super.onActivityResultBefore(requestCode, resultCode, data);
     }
 
     //endregion
 
     //region Toast functionality
-    protected void toast(final String format, final Object...args) {
+    protected void toast(final String format, final Object... args) {
         final String txt = String.format(format, args);
         final Toast toast = Toast.makeText(this, txt, Toast.LENGTH_LONG);
         toast.show();

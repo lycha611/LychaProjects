@@ -1,1 +1,1 @@
-include ':app', ':corelib', ':sharedresources'
+include ':app', ':corelib', ':sharedresources', ':ParseLoginUI'

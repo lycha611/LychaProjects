@@ -14,6 +14,8 @@ import com.spoon.corelib.backend.utils.Logger;
  */
 public class LoggerFragment extends ExtendedLifecycleFragment {
 
+    // TODO: 9/17/2015 Change intents logger. Should be look like LoggerActivity
+    
     private static boolean mLogLifecycle = false;
     public static void setLoggerEnabled(final boolean active) {
         mLogLifecycle = active;

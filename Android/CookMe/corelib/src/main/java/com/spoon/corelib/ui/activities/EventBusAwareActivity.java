@@ -11,9 +11,7 @@ import java.util.Set;
  * Created by Lycha on 9/5/2015.
  */
 public class EventBusAwareActivity extends InjectionActivity {
-
-
-
+    
     private final Set<BaseEventBus> mBusesToMonitor = new HashSet<>();
     private final Set<BaseEventBus> mBusesToStickyMonitor = new HashSet<>();
 
