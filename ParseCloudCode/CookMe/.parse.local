@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "CookMe": {
+      "applicationId": "NUHz1gEnmil3VtMWcW4hu7N1OcEdPsPOpuhBE1B9"
+    },
+    "_default": {
+      "link": "CookMe"
+    }
+  }
+}

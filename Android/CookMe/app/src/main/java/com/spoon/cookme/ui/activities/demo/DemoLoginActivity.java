@@ -3,10 +3,7 @@ package com.spoon.cookme.ui.activities.demo;
 import android.os.Bundle;
 
 import com.parse.ParseAnalytics;
-import com.parse.ParseException;
 import com.spoon.cookme.R;
-import com.spoon.cookme.backend.controllers.Controllers;
-import com.spoon.cookme.backend.models.DemoModel;
 import com.spoon.corelib.backend.annotations.ContentView;
 import com.spoon.corelib.ui.activities.BaseActivity;
 

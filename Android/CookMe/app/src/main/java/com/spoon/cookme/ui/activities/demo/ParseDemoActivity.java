@@ -11,18 +11,14 @@ import com.parse.ParseException;
 import com.parse.SaveCallback;
 import com.spoon.cookme.R;
 import com.spoon.cookme.backend.controllers.Controllers;
-import com.spoon.cookme.backend.controllers.DemoController;
-import com.spoon.cookme.backend.models.DemoModel;
+import com.spoon.cookme.backend.models.demo.DemoModel;
 import com.spoon.corelib.backend.annotations.ContentView;
-import com.spoon.corelib.backend.utils.Logger;
 import com.spoon.corelib.ui.activities.BaseActivity;
 
-import java.net.FileNameMap;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.OnClick;
-import butterknife.OnItemClick;
 
 
 /**
@@ -72,7 +68,7 @@ public class ParseDemoActivity extends BaseActivity {
 
     @OnClick(R.id.btn_save_item_eventually)
     public void saveItemEventually() {
-
+        Controllers.DemoController.saveItemEventually(generateNewDemoModelObject());
     }
 
     @OnClick(R.id.btn_save_item_eventually_c)

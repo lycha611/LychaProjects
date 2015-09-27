@@ -40,10 +40,8 @@ import com.facebook.GraphResponse;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
-import com.parse.ParseTwitterUtils;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-import com.parse.twitter.Twitter;
 
 import org.json.JSONObject;
 
@@ -102,7 +100,6 @@ public class ParseLoginFragment extends ParseLoginFragmentBase {
     parseLoginButton = (Button) v.findViewById(R.id.parse_login_button);
     parseSignupButton = (Button) v.findViewById(R.id.parse_signup_button);
     facebookLoginButton = (Button) v.findViewById(R.id.facebook_login);
-    twitterLoginButton = (Button) v.findViewById(R.id.twitter_login);
 
     if (appLogo != null && config.getAppLogo() != null) {
       appLogo.setImageResource(config.getAppLogo());
@@ -112,9 +109,6 @@ public class ParseLoginFragment extends ParseLoginFragmentBase {
     }
     if (allowFacebookLogin()) {
       setUpFacebookLogin();
-    }
-    if (allowTwitterLogin()) {
-      setUpTwitterLogin();
     }
     return v;
   }
@@ -307,63 +301,6 @@ public class ParseLoginFragment extends ParseLoginFragmentBase {
           ParseFacebookUtils.logInWithReadPermissionsInBackground(getActivity(),
                   config.getFacebookLoginPermissions(), facebookLoginCallbackV4);
         }
-      }
-    });
-  }
-
-  private void setUpTwitterLogin() {
-    twitterLoginButton.setVisibility(View.VISIBLE);
-
-    if (config.getTwitterLoginButtonText() != null) {
-      twitterLoginButton.setText(config.getTwitterLoginButtonText());
-    }
-
-    twitterLoginButton.setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        loadingStart(false); // Twitter login pop-up already has a spinner
-        ParseTwitterUtils.logIn(getActivity(), new LogInCallback() {
-          @Override
-          public void done(ParseUser user, ParseException e) {
-            if (isActivityDestroyed()) {
-              return;
-            }
-
-            if (user == null) {
-              loadingFinish();
-              if (e != null) {
-                showToast(R.string.com_parse_ui_twitter_login_failed_toast);
-                debugLog(getString(R.string.com_parse_ui_login_warning_twitter_login_failed) +
-                    e.toString());
-              }
-            } else if (user.isNew()) {
-              Twitter twitterUser = ParseTwitterUtils.getTwitter();
-              if (twitterUser != null
-                  && twitterUser.getScreenName().length() > 0) {
-                /*
-                  To keep this example simple, we put the users' Twitter screen name
-                  into the name field of the Parse user object. If you want the user's
-                  real name instead, you can implement additional calls to the
-                  Twitter API to fetch it.
-                */
-                user.put(USER_OBJECT_NAME_FIELD, twitterUser.getScreenName());
-                user.saveInBackground(new SaveCallback() {
-                  @Override
-                  public void done(ParseException e) {
-                    if (e != null) {
-                      debugLog(getString(
-                          R.string.com_parse_ui_login_warning_twitter_login_user_update_failed) +
-                          e.toString());
-                    }
-                    loginSuccess();
-                  }
-                });
-              }
-            } else {
-              loginSuccess();
-            }
-          }
-        });
       }
     });
   }

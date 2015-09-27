@@ -1,6 +1,6 @@
 package com.spoon.cookme.backend.controllers;
 
-import com.spoon.cookme.backend.models.DemoModel;
+import com.spoon.cookme.backend.models.demo.DemoModel;
 import com.spoon.corelib.backend.controllers.BaseController;
 
 /**
