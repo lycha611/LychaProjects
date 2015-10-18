@@ -65,7 +65,7 @@ public class ParseImageViewTest extends InstrumentationTestCase {
 
   public void testParseImageViewWithImageParseFile() throws Exception {
     Context context = getInstrumentation().getTargetContext();
-    final Drawable iconImage = context.getResources().getDrawable(R.drawable.icon);
+    final Drawable iconImage = context.getResources().getDrawable(R.drawable.com_parse_ui_app_logo);
     Bitmap iconBitmap = ((BitmapDrawable) iconImage).getBitmap();
     ByteArrayOutputStream stream = new ByteArrayOutputStream();
     iconBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);

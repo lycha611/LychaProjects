@@ -1,5 +1,6 @@
 package com.spoon.cookme.application;
 
+import com.facebook.FacebookSdk;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseFacebookUtils;
@@ -37,6 +38,10 @@ public class ThisApplication extends BaseApplication {
         if (AppConfiguration.shouldUseStetho()) {
             StethoIntegration.init(this);
         }
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        // Initialize the SDK before executing any other operations,
+        // especially, if you're using Facebook UI elements.
 
         JodaTimeAndroid.init(this);
         EventBuses.init();

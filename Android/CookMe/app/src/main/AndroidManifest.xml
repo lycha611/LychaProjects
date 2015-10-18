@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
+
     <permission
         android:name="com.spoon.cookme.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
@@ -25,7 +26,7 @@
         <!-- ACTIVITIES -->
 
         <activity
-            android:name=".ui.activities.demo.DemoNotificationActivity"
+            android:name=".ui.activities.demo.DemoCloudCodeActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,41 +38,57 @@
                 android:value="true" />
         </activity>
 
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <!--<activity-->
-            <!--android:name=".ui.activities.ParseDemoActivity"-->
-            <!--android:label="@string/app_name"></activity>-->
+        <!--android:name=".ui.activities.ParseDemoActivity"-->
+        <!--android:label="@string/app_name"></activity>-->
 
 
         <!--<activity-->
-            <!--android:name="com.parse.ui.ParseLoginActivity"-->
-            <!--android:label="@string/app_name"-->
-            <!--android:launchMode="singleTop">-->
+        <!--android:name="com.parse.ui.ParseLoginActivity"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:launchMode="singleTop">-->
 
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
 
-            <!--<meta-data-->
-                <!--android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"-->
-                <!--android:value="true" />-->
-            <!--<meta-data-->
-                <!--android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_EMAIL_AS_USERNAME"-->
-                <!--android:value="true" />-->
-            <!--<meta-data-->
-                <!--android:name="com.parse.ui.ParseLoginActivity.FACEBOOK_LOGIN_ENABLED"-->
-                <!--android:value="true" />-->
+        <!--<meta-data-->
+        <!--android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"-->
+        <!--android:value="true" />-->
+        <!--<meta-data-->
+        <!--android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_EMAIL_AS_USERNAME"-->
+        <!--android:value="true" />-->
+        <!--<meta-data-->
+        <!--android:name="com.parse.ui.ParseLoginActivity.FACEBOOK_LOGIN_ENABLED"-->
+        <!--android:value="true" />-->
         <!--</activity>-->
 
 
         // Remember later uncomment this below
         <!--<activity-->
-            <!--android:name="com.facebook.FacebookActivity"-->
-            <!--android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
-            <!--android:label="@string/app_name"-->
-            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--android:name="com.facebook.FacebookActivity"-->
+        <!--android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
         <!-- -->
+
+        <!-- PROVIDERS -->
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1234"
+            android:exported="true" />
 
         <!-- BROADCAST RECEIVERS -->
 
